@@ -6,6 +6,7 @@
         Quadilateral = 1,
         Triangle = 2,
         Circle = 3,
+        CountObject = 94,
         CalcPerimeters = 95,
         CalcSurfaces = 96,
         ListShapes = 97,
