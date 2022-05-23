@@ -4,13 +4,9 @@ namespace Shapes.Polymorph
     public abstract class Shape
     { 
 
-        //public double Width { get; set; }
-        //public double Height { get; set; }
         protected string Name { get; set; }
-
         protected double Perimeter { get; private set; }
         protected double Surface { get; private set; }
-
         protected Shape(string name, double perimeter = 0, double surface = 0)
         {
             Name = name;
@@ -22,8 +18,6 @@ namespace Shapes.Polymorph
         {
             Name = name;
         }
-
-
         public Shape(Shape ob)
         {
             Perimeter = ob.Perimeter;

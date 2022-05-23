@@ -153,6 +153,18 @@ namespace Shapes
         {
             Console.WriteLine("\t Number of Objects: {0}", ListShapes.Count);
 
+            var query = from shape in ListShapes
+                    group shape by shape.GetType() into grouping
+                    select new
+                    {
+                        Name = grouping.Key.Name,
+                        NumShapes = grouping.Count()
+                    };
+
+            foreach (var shape in query)
+            {
+                Console.WriteLine("\t Object: {0} Quantity {1}", shape.Name, shape.NumShapes);
+            }
             //ListShapes.GetType()
 
             //var count = ListShapes.GroupBy(x => x.GetType());
